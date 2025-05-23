@@ -1,0 +1,208 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap');
+
+:root {
+  --primary: #2980b9;
+  --primary-hover: #3498db;
+  --background-light: #f4f4f9;
+  --background-dark: #1e1e1e;
+  --text-light: #333;
+  --text-dark: #eee;
+  --card-light: #ffffff;
+  --card-dark: #2b2b2b;
+  --input-bg-dark: #3b3b3b;
+  --input-border-dark: #4a4a4a;
+  --footer-bg: #2c3e50;
+}
+
+/* Reset and base styles */
+* {
+  box-sizing: border-box;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: var(--background-light);
+  color: var(--text-light);
+  margin: 0;
+  padding: 0;
+  line-height: 1.5;
+}
+
+header {
+  background-color: var(--footer-bg);
+  color: white;
+  text-align: center;
+  padding: 2rem 1rem;
+  animation: fadeSlideIn 0.6s ease-out;
+}
+
+h1 {
+  margin: 0;
+  font-size: 2.75rem;
+  font-weight: 600;
+}
+
+.intro {
+  font-size: 1.2rem;
+  margin-top: 1rem;
+  color: #ddd;
+}
+
+main {
+  max-width: 800px;
+  margin: auto;
+  padding: 2rem 1rem;
+  animation: fadeSlideIn 0.8s ease-out;
+}
+
+.calculator {
+  background-color: var(--card-light);
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+}
+
+.form-group {
+  margin-bottom: 1.5rem;
+}
+
+label {
+  display: block;
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+}
+
+input[type="number"] {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid #bbb;
+  border-radius: 6px;
+  font-size: 1rem;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+input[type="number"]:focus {
+  border-color: var(--primary);
+  outline: none;
+  box-shadow: 0 0 0 4px rgba(41, 128, 185, 0.4);
+}
+
+fieldset {
+  border: none;
+  padding: 0;
+  margin-bottom: 1.5rem;
+}
+
+legend {
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+button {
+  background-color: var(--primary);
+  color: white;
+  padding: 1rem 2rem;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: 500;
+  transition: transform 0.2s ease, background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: var(--primary-hover);
+  transform: translateY(-2px);
+}
+
+button:active {
+  transform: scale(0.96);
+}
+
+button:focus {
+  outline: 3px solid var(--primary-hover);
+  outline-offset: 2px;
+}
+
+button.toggle-mode {
+  margin-top: 1rem;
+  background-color: var(--primary-hover);
+  color: white;
+  font-weight: 600;
+  box-shadow: 0 3px 6px rgba(41, 128, 185, 0.4);
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+button.toggle-mode:hover {
+  background-color: var(--primary);
+  box-shadow: 0 5px 12px rgba(41, 128, 185, 0.6);
+}
+
+.result {
+  margin-top: 2rem;
+  padding: 1.5rem;
+  background-color: #e1e6f0;
+  border-radius: 12px;
+  box-shadow: 0 0 10px rgba(41, 128, 185, 0.25);
+  font-size: 1.2rem;
+  color: #164875;
+  font-weight: 600;
+  display: none;
+  animation: fadeSlideIn 0.6s ease-out;
+}
+
+.result.show {
+  display: block;
+}
+
+footer {
+  text-align: center;
+  background-color: var(--footer-bg);
+  color: white;
+  padding: 1rem 0;
+  margin-top: 2rem;
+  animation: fadeSlideIn 1s ease-out;
+}
+
+@keyframes fadeSlideIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Dark Mode */
+body.dark-mode {
+  background-color: var(--background-dark);
+  color: var(--text-dark);
+}
+
+body.dark-mode .calculator {
+  background-color: var(--card-dark);
+}
+
+body.dark-mode input[type="number"] {
+  background-color: var(--input-bg-dark);
+  border: 1px solid var(--input-border-dark);
+  color: var(--text-dark);
+}
+
+body.dark-mode .result {
+  background-color: #35475e;
+  color: #a9c0ff;
+  box-shadow: 0 0 12px rgba(70, 130, 180, 0.5);
+}
+
+/* Disabled inputs */
+input[disabled] {
+  background-color: #ccc;
+  cursor: not-allowed;
+  color: #666;
+}
+
+/*poco a poco css no es tan complicado
