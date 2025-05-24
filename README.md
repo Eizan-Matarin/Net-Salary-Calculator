@@ -16,3 +16,6 @@ Calculadora de salario neto en JavaScript que estima el sueldo mensual después 
 
 ## 🧠 Autor
 Eizan Matarín – [@eizan-matarin]
+
+## Mi humilde pagina
+https://eizan-matarin.github.io/Net-Salary-Calculator/
